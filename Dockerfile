@@ -21,10 +21,10 @@ RUN sudo yum install ftp://bo.mirror.garr.it/1/slc/centos/7.1.1503/extras/x86_64
 RUN sudo yum update -y
 RUN touch /etc/yum.repos.d/nginx.repo
 WORKDIR /usr/
-RUN touch /etc/yum.repos.d/docker.repo
-COPY  ./docker.repo  /etc/yum.repos.d/docker.repo
-RUN sudo yum install docker-engine -y
-RUN sudo systemctl enable docker.service
-RUN sudo yum update -y
-RUN sudo yum install nginx -y 
-RUN sudo systemctl enable nginx
+#RUN touch /etc/yum.repos.d/docker.repo
+#COPY  ./docker.repo  /etc/yum.repos.d/docker.repo
+#RUN sudo yum install docker-engine -y
+#RUN sudo systemctl enable docker.service
+#RUN sudo yum update -y
+#RUN sudo yum install nginx -y 
+#RUN sudo systemctl enable nginx
